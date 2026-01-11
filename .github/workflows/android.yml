@@ -25,11 +25,11 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Test app with Gradle
-      run: ./gradlew app:testDebug
+      run: ./gradlew scr:testDebug
     - name: Build debug APK with Gradle
-      run: ./gradlew app:packageDebug
+      run: ./gradlew scr:packageDebug
     - name: Upload debug APK artifact
       uses: actions/upload-artifact@v4
       with:
-         name: App
+         name: Scr
          path: ./app/build/outputs/apk/debug/*.apk
